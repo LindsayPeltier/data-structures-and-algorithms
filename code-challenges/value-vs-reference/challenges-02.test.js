@@ -8,10 +8,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => {
-  // Solution code here...
-};
-
+const appendTheEnd = (str) => a.concat('The end.');
+appendTheEnd();
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -26,8 +24,9 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
-};
+  const item = arr[0];
+  arr.push(item);
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
