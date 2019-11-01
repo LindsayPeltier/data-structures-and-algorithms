@@ -11,10 +11,12 @@ For example:
 'h3llo world' returns true
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
+
 const isNum = (input) => {
   let regEx = /[0-9]/g;
   return regEx.test(input);
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -24,7 +26,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  return str.match(/([A-Z])\w+/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,7 +36,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let aToJCities = [];
+  let aToJ = /(^[A-J]).+/;
+
+  arr.forEach( element => {
+    if(aToJ.test(element)) {
+      aToJCities.push(element);
+    }
+  });
+  return aToJCities;
 };
 
 /* ------------------------------------------------------------------------------------------------
