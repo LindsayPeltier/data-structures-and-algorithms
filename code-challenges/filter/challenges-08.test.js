@@ -25,11 +25,13 @@ The callback function to filter should include or utilize a regular expression p
 For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 'hound'].
 ------------------------------------------------------------------------------------------------ */
 
-
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  let regex = /[aeiou]/gi;
+  let answer = arr.filter((element) => {
+    return regex.test(element);
+  });
+  return answer;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
