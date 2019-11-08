@@ -14,6 +14,10 @@ const countNumberOfElements = (arr) => {
   });
 };
 
+const countNumberOfElements = (arr) => {
+return arr.reduce(accumulator => accumulator + 1,0);
+};
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -71,9 +75,9 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  const names = arr.reduce( (acc, char) => {
-    acc.push(char.name );
-    return acc;
+  const names = arr.reduce( (accumulator, current) => {
+    accumulator.push(current.name );
+    return accumulator;
   }, [] );
   return names;
 };
@@ -87,7 +91,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  return str.split('').reduce((acc, letter) => letter + acc);
+  return str.split('').reduce((accumulator, current) => current + accumulator);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,12 +143,12 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (arr) => {
-  return arr.reduce((acc, char) => {
+const countNumberOfChildren = (array) => {
+  return array.reduce((accumulator, current) => {
     if(char.children){
-      acc += char.children.length;
+      accumulator += char.children.length;
     }
-    return acc;
+    return accumulator;
   },0);
 };
 
