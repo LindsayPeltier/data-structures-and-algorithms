@@ -86,8 +86,8 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
-  return arr.split('').reduce((acc, letter) => letter + acc);
+const reversedString = (str) => {
+  return str.split('').reduce((acc, letter) => letter + acc);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -152,7 +152,11 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let value = arr.reduce((acc, curr) => {
+    acc.sum += curr;
+    return acc;
+  }, {count:0, sum:0});
+  return value.sum/arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
