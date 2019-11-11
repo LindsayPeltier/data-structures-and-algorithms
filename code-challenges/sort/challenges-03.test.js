@@ -7,7 +7,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort( (a,b) => {
+    return b - a;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -20,9 +23,7 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  // Solution code here...
-};
+const alphabetize = (arr) => arr.sort();
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -31,7 +32,14 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    if(a.length < b.length){
+      return -1;
+    }else if( a.length > b.length){
+      return 1;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,8 +51,16 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
-};
+  arr.sort((a, b) => {
+    if (a.toLowerCase() > b.toLowerCase()) {
+      return 1;
+    } else if (a.toLowerCase() < b.toLowerCase()) {
+      return -1;
+    } else {
+      return 0;
+    }
+  return arr;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -60,7 +76,14 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    if(a.price < b.price){
+      return -1;
+    }else if (a.price > b.price){
+      return 1;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +95,8 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  arr.sort( (a,b) => a.toString().length - b.toString().length);
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -94,7 +118,14 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => {
+    if(a.lastName < b.lastName){
+      return -1;
+    }else if(a.lastName > b.lastName){
+      return 1;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +139,16 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+    if(a.lastName < b.lastName) return -1;
+    if(a.lastName > b.lastName) return 1;
+    if(a.lastName === b.lastName) {
+      if(a.firstName < b.firstName) return -1;
+      if(a.firstName > b.firstName) return 1;
+      if(a.firstName === b.firstName) return a.age - b.age;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
