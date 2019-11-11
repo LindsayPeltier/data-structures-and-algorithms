@@ -7,9 +7,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  return arr.sort((a, b) => {
-    return b - a;
-  })
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -23,7 +21,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  return arr.sort();
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,9 +31,7 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  return arr.sort((a, b) => {
-    return a.length - b.length;
-  })
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,17 +43,8 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  arr.sort((a, b) => {
-    if (a.toLowerCase() > b.toLowerCase()) {
-      return 1;
-    } else if (a.toLowerCase() < b.toLowerCase()) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
-
-  return arr;
+  // Solution code here...
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
