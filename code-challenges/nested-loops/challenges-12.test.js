@@ -32,13 +32,13 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hour, sales) => {
-  let hourObject = [];
-  sales.forEach((element, index) => {
+  let hourObject = []; //creating the answer array
+  sales.forEach((element, index) => { //modeling the data into the object format
     let tempObj = {
-      sales: element + ' cookies',
+      sales: element + ' cookies', //concatenating the number of cookies with the cookies label 
       time: hour[index]
     };
-    hourObject.push(tempObj);
+    hourObject.push(tempObj); //pushing the object into the array
   });
   return hourObject;
 };
@@ -61,8 +61,10 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return errands[2].items[1].quantity;
 };
+//howManyTreats is expecting an array and it will return the quantity of the item in the 1st index position of the object in the 2nd index position of the array
+//Not a univeral solution because it will only work with this data as is
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -79,7 +81,14 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  let attack = board[row][col];
+
+  if (attack === '#') { 
+    return 'hit';
+
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
