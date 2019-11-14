@@ -64,8 +64,8 @@ CHALLENGE 6
 Write a function named findAnything that takes in an array of strings, along with a target string. Return an array containing only those strings from the original array that contain the target string.
 ------------------------------------------------------------------------------------------------ */
 
-const findAnything = (arr, target) => {
-  // Solution code here...
+const findAnything = (array, target) => {
+  return array.filter(element => element.includes(target))
 };
 
 /* ------------------------------------------------------------------------------------------------
