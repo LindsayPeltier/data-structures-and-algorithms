@@ -44,8 +44,8 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
-const onlyOddChars = (str) => {
-  // Solution code here...
+const onlyOddChars = (string) => {
+  return string.split('').filter((character, index) => index % 2 === 1).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
