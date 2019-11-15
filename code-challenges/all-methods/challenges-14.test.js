@@ -114,8 +114,20 @@ Here is an example of the input:
 This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
-const sortBy = (property, arr) => {
-  // Solution code here...
+const sortBy = (property, array) => {
+  let result = array;
+
+  result.sort((a, b) => {
+    if (a[property] < b[property]) {
+      return -1;
+    }
+    if (a[property] > b[property]) {
+      return 1;
+    }
+    return 0;
+  });
+
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
