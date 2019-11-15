@@ -87,9 +87,18 @@ let starWarsData = [
   }
 ];
 
-let biggerThanLuke = arr => {
-  // Solution code here...
+let biggerThanLuke = array => {
+  return array
+    .reduce((accumulator, character) => {
+      if (Number(character.mass) > Number(array[0].mass)) {
+        accumulator.push(character.name);
+      }
+      return accumulator;
+    }, [])
+    .join(" - ");
 };
+
+//console.log(biggerThanLuke(starWarsData));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
