@@ -172,7 +172,11 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = board => {
-  // Solution code here...
+  //establish 'X', 'O', and '' as moves
+  //Compare values in each array; if they were to all match, game is won
+  //Then use map to place the [0] index of each array into new arrays to compare vertically
+  //Then use map to pace the [0] of [0], the [1] of [1], and the [2] of [2]
+  //getting too complicated...
 };
 
 /* ------------------------------------------------------------------------------------------------
