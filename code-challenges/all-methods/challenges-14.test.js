@@ -142,8 +142,14 @@ http://www.insecure.com returns false because the URL is not secure
 https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
+//regex would work...but not feeling that amitious right now :)
+
 const isSecure = url => {
-  // Solution code here...
+  if (url.includes("https://")) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
