@@ -75,8 +75,9 @@ For example, if given the string "Hello, and have a wonderful day!", the word "H
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
 ------------------------------------------------------------------------------------------------ */
 
-const noPunctuation = str => {
-  // Solution code here...
+const noPunctuation = string => {
+  let withSpace = /[a-zA-Z]+\s/g;
+  return string.match(withSpace);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,8 +92,9 @@ The function should return a string containing the consonants in their original 
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
-let hangman = str => {
-  // Solution code here...
+let hangman = string => {
+  let regEx = /[aeiou]/gi;
+  return string.replace(regEx, "_");
 };
 
 /* ------------------------------------------------------------------------------------------------
