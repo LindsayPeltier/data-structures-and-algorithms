@@ -142,8 +142,14 @@ For example:
   console.log(integers) will print [1, 3, 5]
 ------------------------------------------------------------------------------------------------ */
 
-const removeEvenValues = arr => {
-  // Solution code here...
+const removeEvenValues = array => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      array.splice(i, 1);
+      i--;
+    }
+  }
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,8 +167,19 @@ removeLastCharacters('Gregor', -2) returns 'Gregor'
 removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
-const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+const removeLastCharacters = (string, numberOfCharacters) => {
+  if (numberOfCharacters < 0) {
+    return string;
+  }
+  if (numberOfCharacters > string.length - 1) {
+    let empty = "";
+    return empty;
+  } else {
+    let temporary = string.split("");
+    temporary.splice(-numberOfCharacters);
+    let newString = temporary.join("");
+    return newString;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
